@@ -55,4 +55,4 @@ Give a star if you like this project!
 
 #### License
 
-This project is [MIT](https://github.com/ArnaudBand/blog_app/blob/dev/MIT.md) licensed.
+This project is [MIT](https://www.mit.edu/about/) licensed.
