@@ -6,6 +6,7 @@ The Blog app will be a classic example of a blog website. You will create a full
 
 - Ruby -v 3.0.2
 - Rails -v 7.0.4
+- gem 'rspec'
 
 ### Getting Started
 
