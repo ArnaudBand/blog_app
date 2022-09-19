@@ -23,9 +23,9 @@ To get a local copy up and running follow these simple steps:
 - Open the terminal and run the following commands:
 
 `
-git clone git@github.com:ArnaudBand/blog_app.git
-rails new . --database=postgresql -T
-cd blog_app
+- git clone git@github.com:ArnaudBand/blog_app.git
+- rails new . --database=postgresql -T
+- cd blog_app
 `
 
 - Run the application on the server using this command
