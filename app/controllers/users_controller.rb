@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @message = "Here are a list of all the users"
+    @message = 'Here are a list of all the users'
   end
 
   def show
