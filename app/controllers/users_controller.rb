@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @message = "Here is the user with id #{params[:id]}"
+    @message = "Here is the user with id"
   end
 end
