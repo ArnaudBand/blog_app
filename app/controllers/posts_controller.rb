@@ -4,6 +4,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @message = "Here is the post with id #{params[:id]}"
+    @message = "Here is the post with id"
   end
 end
