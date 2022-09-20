@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-RSpec.describe "Posts", type: :request do
+RSpec.describe 'Posts', type: :request do
   let(:user) { User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.') }
-  subject(:post) { Post.create(author: user, title: 'Hello 1', text: 'This is my first post')}
+  subject(:post) { Post.create(author: user, title: 'Hello 1', text: 'This is my first post') }
 
   describe 'GET /posts' do
     before(:example) do
@@ -36,7 +36,7 @@ RSpec.describe "Posts", type: :request do
     end
 
     it 'has the correct placeholder text' do
-      expect(response.body).to include("Here is the post with id")
+      expect(response.body).to include('Here is the post with id')
     end
   end
 end

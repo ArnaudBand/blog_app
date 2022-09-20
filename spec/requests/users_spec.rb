@@ -18,7 +18,7 @@ RSpec.describe UsersController, type: :request do
   end
 
   describe 'GET user#show' do
-    subject(:user) {User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')}
+    subject(:user) { User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.') }
 
     before(:example) do
       get "#{users_path}/#{user.id}"
