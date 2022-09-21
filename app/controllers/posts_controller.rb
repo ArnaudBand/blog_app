@@ -1,9 +1,12 @@
 class PostsController < ApplicationController
   def index
-    @message = 'Here are a list of all the posts'
+    @user = User.find(params[:user_id])
+    @posts = @user.posts.order(id: :desc)
   end
 
   def show
-    @message = 'Here is the post with id'
+    @posts = Post.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    render file: 'public/404.html', status: :not_found
   end
 end
