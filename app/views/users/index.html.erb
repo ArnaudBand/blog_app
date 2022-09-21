@@ -1,1 +1,7 @@
-<h1 class="title"><%= @message %></h1>
+<div id="user_div" class="author-div">
+<% if @user.length > 0 %>
+  <%= render @user %>
+<% else %>
+  <%= render html: '<p /><h1>There are no Users in the database</h1>'.html_safe %>
+<% end %>
+</div>
