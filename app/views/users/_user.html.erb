@@ -1,0 +1,9 @@
+<div class="block">
+  <div class="photo">
+    <img src="<%= user.photo %>" height=55 width=55 alt=""/>
+  </div>
+  <div class="row-part">
+    <h3><%= link_to(user_path(user.id)) {user.name} %></h3>
+    <p><%= render partial: 'users/count', object: user.posts_counter %></p>
+  </div>
+</div>
