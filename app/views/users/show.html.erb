@@ -1,1 +1,6 @@
-<h3 class="title"><%= @message %></h3>
+<div id="show_user">
+  <%= render @user %>
+  <%= render 'users/bio' %>
+  <%= render @user.most_recent_posts %>
+  <div class="row-center"><%= link_to(user_posts_path(@user.id)) { 'See all posts' } %></div>
+</div>
