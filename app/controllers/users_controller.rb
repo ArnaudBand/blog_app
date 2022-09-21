@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @message = 'Here is the user with id'
+    @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to users_path, :flash => { :error => "Record not found." }
   end
 end
