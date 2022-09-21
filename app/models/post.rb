@@ -10,10 +10,6 @@ class Post < ApplicationRecord
 
   after_save :update_counters
 
-  after_initialize do |post|
-    post.comments_counter = 0
-    post.likes_counter = 0
-  end
 
   def most_recent_comments
     comments.order(created_at: :desc).limit(5)
