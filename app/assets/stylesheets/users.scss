@@ -1,13 +1,39 @@
 $font_family : 'Helvetica Neue',
-Helvetica,
-Arial,
-sans-serif;
+  Helvetica,
+  arial,
+  sans-serif;
 $width : 100%;
 $size :1.3rem;
 $num : 1rem;
 
 .post_div {
   font-family: $font_family;
+}
+
+
+.post_box {
+  font-family: $font_family;
+  border: 1px solid #ccc;
+  margin: 1rem 0.25rem;
+  border-radius: $num;
+  padding: 0.5rem 1rem;
+
+  .post_title {
+    margin: 0 0.5rem 1rem 0;
+
+    a {
+      text-decoration: none;
+      color: #000;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .post_count {
+    text-align: right;
+  }
 }
 
 .block {
@@ -33,7 +59,6 @@ $num : 1rem;
     justify-content: space-between;
 
     .user_title {
-
       font-size: 2rem;
 
       a {
@@ -70,31 +95,6 @@ $num : 1rem;
   .bio_user {
     font-size: $size;
     margin: 2rem 0.5rem 0 0.5rem;
-  }
-}
-
-.post_box {
-  font-family: $font_family;
-  border: 1px solid #ccc;
-  margin: 1rem 0.25rem;
-  border-radius: $num;
-  padding: 0.5rem 1rem;
-
-  .post_title {
-    margin: 0 0.5rem 1rem 0;
-
-    a {
-      text-decoration: none;
-      color: #000;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .post_count {
-    text-align: right;
   }
 }
 
