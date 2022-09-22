@@ -2,5 +2,5 @@
   <%= render @user %>
   <%= render 'users/bio' %>
   <%= render @user.most_recent_posts %>
-  <div class="row-center"><%= link_to(user_posts_path(@user.id)) { 'See all posts' } %></div>
+  <button class="see"> <%= link_to "See all posts", user_posts_path(@user), {:class => "button_class"} %> </button> 
 </div>
