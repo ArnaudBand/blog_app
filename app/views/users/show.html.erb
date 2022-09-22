@@ -1,1 +1,6 @@
-<h3 class="title"><%= @message %></h3>
+<div id="show_user">
+  <%= render @user %>
+  <%= render 'users/bio' %>
+  <%= render @user.most_recent_posts %>
+  <button class="see"> <%= link_to "See all posts", user_posts_path(@user), {:class => "button_class"} %> </button> 
+</div>

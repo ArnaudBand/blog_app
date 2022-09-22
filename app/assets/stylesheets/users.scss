@@ -1,4 +1,103 @@
-.title {
-  font-size: 20px;
-  text-align: center;
+$font_family : 'Helvetica Neue',
+  helvetica,
+  arial,
+  sans-serif;
+$width : 100%;
+$size :1.3rem;
+$num : 1rem;
+
+.post_div {
+  font-family: $font_family;
+}
+
+.post_box {
+  font-family: $font_family;
+  border: 1px solid #ccc;
+  margin: 1rem 0.25rem;
+  border-radius: $num;
+  padding: 0.5rem 1rem;
+
+  .post_title {
+    margin: 0 0.5rem 1rem 0;
+
+    a {
+      text-decoration: none;
+      color: #000;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .post_count {
+    text-align: right;
+  }
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  font-family: $font_family;
+
+  .photo {
+    border: 1px solid #ccc;
+    border-radius: $num;
+    padding: 0.25rem;
+    margin-right: 0.5rem;
+  }
+
+  .row-part {
+    border: 1px solid #ccc;
+    border-radius: $num;
+    padding: 0 1rem;
+    width: $width;
+    margin: 0 0.25rem;
+    display: flex;
+    justify-content: space-between;
+
+    .user_title {
+      font-size: 2rem;
+
+      a {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .user_count {
+      font-size: $size;
+      margin-top: 4rem;
+    }
+  }
+}
+
+.column {
+  border: 1px solid #ccc;
+  margin: 1rem 0.25rem;
+  padding: 1rem 0.5rem;
+  border-radius: $num;
+  font-family: $font_family;
+  display: flex;
+  justify-content: space-between;
+
+  .bio_title {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+  }
+
+  .bio_user {
+    font-size: $size;
+    margin: 2rem 0.5rem 0 0.5rem;
+  }
+}
+
+.comment_user {
+  margin: 1rem 0.25rem;
+  padding: 0.5rem 1rem;
 }
