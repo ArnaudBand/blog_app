@@ -75,6 +75,15 @@ $num : 1rem;
       margin-top: 4rem;
     }
   }
+
+  .new_post {
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: $num;
+    padding: 0.25rem 1rem;
+    color: #fff;
+    background-color: #000;
+  }
 }
 
 .column {
