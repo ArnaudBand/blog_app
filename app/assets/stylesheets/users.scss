@@ -72,9 +72,45 @@ $num : 1rem;
 
     .user_count {
       font-size: $size;
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
   }
+}
+
+.form {
+  .form_title {
+    margin: 0.5rem 0;
+    padding: 0.5rem 4rem 0.5rem 0.5rem;
+  }
+
+  .form_text {
+    padding: 0.5rem 4rem 4rem 0.5rem;
+  }
+
+  .form_btn {
+    margin: 1rem 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: $num;
+  }
+}
+
+.flex_button {
+  display: flex;
+  margin: 0.5rem 0;
+  font-family: $font_family;
+}
+
+.new_post {
+  font-family: $font_family;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: $num;
+  padding: 0.25rem 1rem;
+  color: #fff;
+  background-color: #000;
 }
 
 .column {

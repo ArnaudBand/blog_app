@@ -20,3 +20,8 @@
     </div>
   <% end %>
 </div>
+
+<div class="flex_button">
+  <%= button_to 'New comment', new_user_post_comment_path(post.author.id, post.id), method: :get, class:"new_post" %>
+  <%= button_to 'Like', user_post_likes_path(post.author, post), method: :post, class:"new_post" %>
+</div>

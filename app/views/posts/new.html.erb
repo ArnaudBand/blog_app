@@ -1,0 +1,15 @@
+<div class="form">
+  <h1>New post</h1> 
+  <%= form_with model: @post, url: user_posts_path do |form| %>
+    <div>
+      <%= form.text_field :title, placeholder:"Title", class:"form_title" %>
+    </div>
+
+    <div>
+      <%= form.text_area :text, placeholder:"Post something", class:"form_text" %>
+    </div>
+
+    <%= form.submit class:"form_btn" %>
+  
+  <%end%>
+</div>

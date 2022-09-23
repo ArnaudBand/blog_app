@@ -7,3 +7,4 @@
     <p class="user_count"><%= render partial: 'users/count', object: user.posts_counter %></p>
   </div>
 </div>
+<%= link_to "Make new post", new_user_post_path(user.id), class:"new_post" %>
