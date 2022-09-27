@@ -38,7 +38,9 @@ RSpec.describe 'Users', type: :system do
   end
 
   describe 'show page:' do
-    before(:example) { visit user_path(2) }
+    before(:example) do
+      visit user_path(2)
+    end
 
     it 'should show profle picture' do
       image = page.all('img')
