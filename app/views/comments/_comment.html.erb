@@ -1,3 +1,5 @@
 <div>
-  <p class="comment_user"><%= comment.author.name %>: <span class="comment_text"><%= comment.text %></span></p>
+  if most_recent_comments.includes(:author).each do |comment|
+    <p class="comment_user"><%= comment.author.name %>: <span class="comment_text"><%= comment.text %></span></p>
+  end
 </div>

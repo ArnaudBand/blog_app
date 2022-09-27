@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.order(id: :desc)
+    @posts = Post.all
   end
 
   def new
@@ -22,6 +22,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments.includes([:author])
+    @user = @post.author
   rescue ActiveRecord::RecordNotFound
     render file: 'public/404.html', status: :not_found
   end
