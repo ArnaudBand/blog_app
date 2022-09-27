@@ -31,6 +31,11 @@ RSpec.describe 'Users', type: :system do
       image = page.all('img')
       expect(image.size).to eq(3)
     end
+
+    it 'redirects to the user page when clicking on the username' do
+      click_link('ada')
+      expect(page).to have_content('ada')
+    end
   end
 
 end
