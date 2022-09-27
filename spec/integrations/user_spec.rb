@@ -22,8 +22,7 @@ RSpec.describe 'Users', type: :system do
     end
 
     it 'shows the number of posts' do
-      expect(page).to have_content('Number of posts: 4')
-      expect(page).to have_content('Number of posts: 0')
+      expect(page).to have_content('Number of posts: 1')
     end
 
     it 'shows the profile picture of all authors' do
@@ -38,31 +37,44 @@ RSpec.describe 'Users', type: :system do
   end
 
   describe 'show page:' do
+    subject(:author) { User.first.id }
     before(:example) do
-      visit user_path(2)
+      visit user_path(author)
     end
 
     it 'should show profle picture' do
       image = page.all('img')
-      expect(image.size).to eq(3)
+      expect(image.size).to eq(1)
     end
 
-    it 'should show users name' do
-      expect(page).to have_content('Tom')
+    it 'should show the username' do
+      expect(page).to have_content('ada')
     end
 
-    it 'should show the numbre of posts' do
-      expect(page).to have_content('Number of posts: 4')
+    it 'should show the number of posts' do
+      expect(page).to have_content('Number of posts: 1')
     end
 
-    # it 'sholud show the Bio' do
-    #   expect(page).to have_content('Bio')
-    # end
+    it 'should show the number of comments' do
+      expect(page).to have_content('Comments: 0')
+    end
 
-    it 'should show first 3 posts' do
-      expect(page).to have_content('Hello 4')
-      expect(page).to have_content('Hello 3')
-      expect(page).to have_content('Hello 2')
+    it 'should show the number of likes' do
+      expect(page).to have_content('Likes: 0')
+    end
+
+    it 'shold show the button to create a new post' do
+      expect(page).to have_content('Make new post')
+    end
+
+    it 'redicts when clicking on the user\'s post' do
+      click_link('Hello 1')
+      expect(page).to have_content('Hello 1')
+    end
+
+    it 'redicts when clicking on see all posts' do
+      click_link('See all posts')
+      expect(page).to have_content('Hello 1')
     end
   end
 end
