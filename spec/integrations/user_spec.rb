@@ -26,6 +26,11 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_content('Number of posts: 4')
       expect(page).to have_content('Number of posts: 0')
     end
+
+    it 'shows the profile picture of all authors' do
+      image = page.all('img')
+      expect(image.size).to eq(3)
+    end
   end
 
 end
