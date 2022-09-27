@@ -13,7 +13,7 @@ user1 = User.create(name: 'Tom', photo: 'https://cdn-icons-png.flaticon.com/512/
 user2 = User.create(name: 'Lilly', photo: 'https://cdn-icons-png.flaticon.com/512/219/219969.png',
                     bio: 'Teacher from Poland.')
 
-Post.create(author: user1, title: 'Hello 1', text: 'This is my first post')
+Post.create(author: User.first, title: 'Hello 1', text: 'This is my first post')
 Post.create(author: user1, title: 'Hello 2', text: 'This is my second post')
 post = Post.create(author: user1, title: 'Hello 3', text: "Contrary to popular belief, Lorem Ipsum \
 is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making \
