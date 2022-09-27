@@ -21,6 +21,11 @@ RSpec.describe 'Users', type: :system do
     it 'shows the username' do
       expect(page).to have_content('Tom')
     end
+
+    it 'shows the number of posts' do
+      expect(page).to have_content('Number of posts: 4')
+      expect(page).to have_content('Number of posts: 0')
+    end
   end
 
 end
