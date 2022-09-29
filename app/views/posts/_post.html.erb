@@ -25,6 +25,6 @@
   <%= button_to 'New comment', new_user_post_comment_path(post.author.id, post.id), method: :get, class:"new_post" %>
   <%= button_to 'Like', user_post_likes_path(post.author, post), method: :post, class:"new_post" %>
   <% if can? :destroy, @post %>
-   <%= button_to "Delete Post", user_post_path(user_id: @post.author.id, post_id: @post.id), method: :delete %>
+   <%= button_to "Delete Post", user_post_path(user_id: @post.author.id, post_id: @post.id), method: :delete, class:"new_post" %>
   <%end %>
 </div>
