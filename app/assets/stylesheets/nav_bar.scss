@@ -1,0 +1,42 @@
+$black: #000;
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  .nav_bar__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav_bar__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20rem;
+    list-style: none;
+
+    .nav_bar__btn {
+      background-color: $black;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    .nav_bar__link {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
