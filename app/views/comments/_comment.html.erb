@@ -1,5 +1,6 @@
 <div>
-  if most_recent_comments.includes(:author).each do |comment|
     <p class="comment_user"><%= comment.author.name %>: <span class="comment_text"><%= comment.text %></span></p>
-  end
+    <% if can? :destroy, comment %>
+      <%= button_to "Delete Comment", user_post_comment_path(user_id: @post.author.id, post_id: @post.id, id: comment.id), method: :delete, class:"new_post" %>
+    <%end %>
 </div>
