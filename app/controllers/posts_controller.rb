@@ -28,6 +28,13 @@ class PostsController < ApplicationController
     render file: 'public/404.html', status: :not_found
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    flash[:notice] = 'Post has been deleted!'
+    redirect_to user_posts_path(current_user)
+  end 
+
   private
 
   def post_params
